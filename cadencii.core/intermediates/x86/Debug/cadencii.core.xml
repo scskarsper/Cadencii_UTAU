@@ -1,0 +1,485 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>cadencii.core</name>
+    </assembly>
+    <members>
+        <member name="M:cadencii.math.gcd(System.Int64,System.Int64)">
+            <summary>
+            2つの整数の最大公約数を返します。
+            </summary>
+            <param name="m"></param>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            デバイス情報オブジェクトを構築します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.equals(System.Object)">
+            <summary>
+            2つのオブジェクトが等しいかどうかを報告します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.getDescription">
+            <summary>
+            デバイスの説明を取得します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.getName">
+            <summary>
+            デバイスの名前を取得します。
+            </summary>          
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.getVendor">
+            <summary>
+            デバイスの供給会社の名前を取得します。
+            </summary> 
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.getVersion">
+            <summary>
+            デバイスのバージョンを取得します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiDevice.Info.toString">
+            <summary>
+            デバイス情報の文字列表現を提供します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.MidiMessage.#ctor(System.Byte[])">
+            <summary>
+            本来はprotected
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.Receiver.close">
+            <summary>
+            アプリケーションによるレシーバの使用が終了し、レシーバが要求する限られたリソースを解放または使用可能にできることを示します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.Receiver.send(cadencii.javax.sound.midi.MidiMessage,System.Int64)">
+            <summary>
+            MIDI メッセージおよび時刻表示をこのレシーバに送信します。
+            </summary>          
+        </member>
+        <member name="M:cadencii.javax.sound.midi.Transmitter.close">
+            <summary>
+            アプリケーションによるレシーバの使用が終了し、トランスミッタが要求する限られたリソースを解放または使用可能にできることを示します。
+            </summary>
+        </member>
+        <member name="M:cadencii.javax.sound.midi.Transmitter.getReceiver">
+            <summary>
+            このトランスミッタで MIDI メッセージを配信する現在のレシーバを取得します。
+            </summary>          
+        </member>
+        <member name="M:cadencii.javax.sound.midi.Transmitter.setReceiver(cadencii.javax.sound.midi.Receiver)">
+            <summary>
+            このトランスミッタで MIDI メッセージを配信するレシーバを設定します。
+            </summary>
+        </member>
+        <member name="M:cadencii.PortUtil.getComponentName(System.Object)">
+            <summary>
+            java:コンポーネントのnameプロパティを返します。C#:コントロールのNameプロパティを返します。
+            objがnullだったり、型がComponent/Controlでない場合は空文字を返します。
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.PortUtil.getCurrentTime">
+            <summary>
+            単位は秒
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.PortUtil.getbytes_uint16_le(System.Int32)">
+            <summary>
+            compatible to BitConverter
+            </summary>
+            <param name="buf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.PortUtil.make_uint16_le(System.Byte[],System.Int32)">
+            <summary>
+            compatible to BitConverter
+            </summary>
+            <param name="buf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.PortUtil.make_int16_le(System.Byte[],System.Int32)">
+            <summary>
+            compatible to BitConverter
+            </summary>
+            <param name="buf"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.PortUtil.charAt(System.String,System.Int32)">
+            <summary>
+            文字列の指定した位置の文字を取得します
+            </summary>
+            <param name="s">文字列</param>
+            <param name="index">位置．先頭が0</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.PortUtil.isPointInScreens(cadencii.java.awt.Point)">
+            <summary>
+            指定した点が，コンピュータの画面のいずれかに含まれているかどうかを調べます
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.RegOpenKeyExW(System.UInt32,System.String,System.UInt32,System.UInt32,System.UInt32*)">
+            <summary>
+            
+            </summary>
+            <param name="hKey">キーのハンドル</param>
+            <param name="pSubKey">オープンするサブキーの名前</param>
+            <param name="ulOptions">予約（0を指定）</param>
+            <param name="samDesired">セキュリティアクセスマスク</param>
+            <param name="phkResult">ハンドルを格納する変数のアドレス</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.RegEnumKeyExW(System.UInt32,System.UInt32,System.String,System.UInt32*,System.UInt32*,System.String,System.UInt32*,cadencii.FILETIME*)">
+            <summary>
+            
+            </summary>
+            <param name="hKey">キーのハンドル</param>
+            <param name="dwIndex">サブキーのインデックス</param>
+            <param name="pName">サブキー名を格納するバッファ</param>
+            <param name="pcbName">pName のサイズを入れた変数</param>
+            <param name="pReserved">予約（NULLを指定）</param>
+            <param name="pClass">クラス名を格納するバッファ</param>
+            <param name="pcbClass">pClass のサイズを入れた変数</param>
+            <param name="pftLastWrite">最終書き込み時間</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.RegQueryValueExW(System.UInt32,System.String,System.UInt32*,System.UInt32*,System.Byte*,System.UInt32*)">
+            <summary>
+            
+            </summary>
+            <param name="hKey">キーのハンドル</param>
+            <param name="pValueName">値の名前</param>
+            <param name="pReserved">予約（NULLを指定）</param>
+            <param name="pType">データタイプを格納する変数</param>
+            <param name="pData">データを格納するバッファ</param>
+            <param name="pcbData">バッファサイズを入れた変数</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.RegCloseKey(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="hKey">キーのハンドル</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.CreateFileW(System.String,System.UInt32,System.UInt32,System.IntPtr,System.UInt32,System.UInt32,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="lpFileName">ファイル名(LPCTSTR)</param>
+            <param name="dwDesiredAccess">アクセスモード(DWORD)</param>
+            <param name="dwShareMode">共有モード(DWORD)</param>
+            <param name="lpSecurityAttributes">セキュリティ記述子(LPSECURITY_ATTRIBUTES)</param>
+            <param name="dwCreationDisposition">作成方法(DWORD)</param>
+            <param name="dwFlagsAndAttributes">ファイル属性(DWORD)</param>
+            <param name="hTemplateFile">テンプレートファイルのハンドル(HANDLE)</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.CreateDirectoryW(System.String,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="lpPathName">ディレクトリ名(LPCTSTR)</param>
+            <param name="lpSecurityAttributes">セキュリティ識別子(LPSECURITY_ATTRIBUTES)</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.GetFileAttributesW(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="lpFileName">ファイルまたはディレクトリの名前(LPCWSTR)</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.GetFullPathNameW(System.String,System.UInt32,System.Text.StringBuilder,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="lpFileName">ファイル名(LPCTSTR)</param>
+            <param name="nBufferLength">パス名を格納するバッファのサイズ(DWORD)</param>
+            <param name="lpBuffer">パス名を格納するバッファ(LPTSTR)</param>
+            <param name="lpFilePart">パス内のファイル名のアドレス(LPTSTR*)</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.InitializeCriticalSection(System.IntPtr@)">
+            <summary>
+            
+            </summary>
+            <param name="lpCriticalSection">元はLPCRITICAL_SECTION</param>
+        </member>
+        <member name="M:cadencii.win32.DeleteCriticalSection(System.IntPtr@)">
+            <summary>
+            
+            </summary>
+            <param name="lpCriticalSection">元はLPCRITICAL_SECTION</param>
+        </member>
+        <member name="M:cadencii.win32.LeaveCriticalSection(System.IntPtr@)">
+            <summary>
+            
+            </summary>
+            <param name="lpCriticalSection">もとはLPCRITICAL_SECTION</param>
+        </member>
+        <member name="M:cadencii.win32.EnterCriticalSection(System.IntPtr@)">
+            <summary>
+            
+            </summary>
+            <param name="lpCriticalSection">LPCRITICAL_SECTION</param>
+        </member>
+        <member name="M:cadencii.win32.GetModuleFileName(System.IntPtr,System.IntPtr,System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="hModule">モジュールのハンドル(HANDLE)</param>
+            <param name="lpFilename">モジュールのファイル名(LPTSTR)</param>
+            <param name="nSize">バッファのサイズ</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.InvalidateRect(System.IntPtr,System.IntPtr,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd">ウィンドウのハンドル</param>
+            <param name="lpRect">長方形の座標(CONST RECT *lpRect)</param>
+            <param name="bErase">消去するかどうかの状態</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.ClientToScreen(System.IntPtr,cadencii.POINT@)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd">ウィンドウのハンドル</param>
+            <param name="lpPoint">クライアント座標</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.win32.SetMenu(System.IntPtr,System.IntPtr)">
+            <summary>
+            
+            </summary>
+            <param name="hWnd">ウィンドウのハンドル</param>
+            <param name="hMenu">メニューのハンドル</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.Misc.obj_clone(System.Object)">
+            <summary>
+            Reflectionを利用して、インスタンスのディープなクローニングを行います。
+            クローン操作の対象はインスタンスのフィールドであり、値型のものは単なる代入を、
+            参照型の物であってかつClone(void)メソッドが実装されているものはCloneしたものを、
+            それ以外は単に参照が代入されます
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.Misc.get_executing_types">
+            <summary>
+            現在の実行アセンブリで使用されている型のリストを取得します
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.Misc.get_executing_namespaces">
+            <summary>
+            現在の実行アセンブリで使用されている名前空間のリストを取得します
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.XmlSerialize.DeserializeXML``1(System.String)">
+            <summary>  
+            反序列化XML为类实例  
+            </summary>  
+            <typeparam name="T"></typeparam>  
+            <param name="xmlObj"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:cadencii.XmlSerialize.SerializeXML``1(``0)">
+            <summary>  
+            序列化类实例为XML  
+            </summary>  
+            <typeparam name="T"></typeparam>  
+            <param name="obj"></param>  
+            <returns></returns>  
+        </member>
+        <member name="F:cadencii.TBBUTTONINFO.lParam">
+            <summary>
+            DWORD_PTR
+            </summary>
+        </member>
+        <member name="F:cadencii.MENUITEMINFO.hSubMenu">
+            <summary>
+            HMENU
+            </summary>
+        </member>
+        <member name="F:cadencii.MENUITEMINFO.hbmpChecked">
+            <summary>
+            HBITMAP
+            </summary>
+        </member>
+        <member name="F:cadencii.MENUITEMINFO.hbmpUnchecked">
+            <summary>
+            HBITMAP
+            </summary>
+        </member>
+        <member name="F:cadencii.MENUITEMINFO.dwItemData">
+            <summary>
+            ULONG_PTR
+            </summary>
+        </member>
+        <member name="F:cadencii.MENUITEMINFO.hbmpItem">
+            <summary>
+            HBITMAP
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.black">
+            <summary>
+            黒を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.BLACK">
+            <summary>
+            黒を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.blue">
+            <summary>
+            青を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.BLUE">
+            <summary>
+            青を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.cyan">
+            <summary>
+            シアンを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.CYAN">
+            <summary>
+            シアンを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.DARK_GRAY">
+            <summary>
+            ダークグレイを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.darkGray">
+            <summary>
+            ダークグレイを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.gray">
+            <summary>
+            グレイを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.GRAY">
+            <summary>
+            グレイを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.green">
+            <summary>
+            緑を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.GREEN">
+            <summary>
+            緑を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.LIGHT_GRAY">
+            <summary>
+            ライトグレイを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.lightGray">
+            <summary>
+            ライトグレイを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.magenta">
+            <summary>
+            マゼンタを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.MAGENTA">
+            <summary>
+            マゼンタを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.orange">
+            <summary>
+            オレンジを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.ORANGE">
+            <summary>
+            オレンジを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.pink">
+            <summary>
+            ピンクを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.PINK">
+            <summary>
+            ピンクを表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.red">
+            <summary>
+            赤を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.RED">
+            <summary>
+            赤を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.white">
+            <summary>
+            白を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.WHITE">
+            <summary>
+            白を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.yellow">
+            <summary>
+            黄を表します。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Color.YELLOW">
+            <summary>
+            黄を表します。 
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Polygon.npoints">
+            <summary>
+            点の総数です。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Polygon.xpoints">
+            <summary>
+            X 座標の配列です。
+            </summary>
+        </member>
+        <member name="F:cadencii.java.awt.Polygon.ypoints">
+            <summary>
+            Y 座標の配列です。
+            </summary>
+        </member>
+    </members>
+</doc>

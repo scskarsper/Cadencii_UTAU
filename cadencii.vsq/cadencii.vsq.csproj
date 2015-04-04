@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{673347F3-6FC2-4F82-9273-BF158E0F8CB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cadencii.vsq</RootNamespace>
+    <AssemblyName>cadencii.vsq</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;CSHARP</DefineConstants>
+    <DocumentationFile>bin\x86\Debug\cadencii.vsq.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DefineConstants>CSHARP</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugMinimal|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\DebugMinimal\</OutputPath>
+    <DefineConstants>DEBUG;CSHARP</DefineConstants>
+    <DocumentationFile>bin\x86\Debug\org.kbinani.vsq.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseMinimal|x86' ">
+    <OutputPath>bin\x86\ReleaseMinimal\</OutputPath>
+    <DocumentationFile>bin\x86\Release\org.kbinani.vsq.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <DefineConstants>CSHARP</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MonoRelease|x86' ">
+    <OutputPath>bin\x86\MonoRelease\</OutputPath>
+    <DocumentationFile>bin\x86\Release\org.kbinani.vsq.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <DefineConstants>CSHARP</DefineConstants>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BPPair.cs" />
+    <Compile Include="DynamicsMode.cs" />
+    <Compile Include="IconDynamicsHandle.cs" />
+    <Compile Include="IconHandle.cs" />
+    <Compile Include="IconParameter.cs" />
+    <Compile Include="IndexIteratorKind.cs" />
+    <Compile Include="InternalStreamWriter.cs" />
+    <Compile Include="io\GetUSTEncodingValue.cs" />
+    <Compile Include="io\ISequenceWriter.cs" />
+    <Compile Include="io\MusicXml.cs" />
+    <Compile Include="io\MusicXmlExtentions.cs">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="io\MusicXmlWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="io\VsqxReader.cs" />
+    <Compile Include="io\VsqxWriter.cs" />
+    <Compile Include="ITextWriter.cs" />
+    <Compile Include="Lyric.cs" />
+    <Compile Include="LyricHandle.cs" />
+    <Compile Include="MidiEvent.cs" />
+    <Compile Include="MidiFile.cs" />
+    <Compile Include="NoteHeadHandle.cs" />
+    <Compile Include="NRPN.cs" />
+    <Compile Include="NrpnIterator.cs" />
+    <Compile Include="PlayMode.cs" />
+    <Compile Include="SingerConfig.cs" />
+    <Compile Include="SingerConfigSys.cs" />
+    <Compile Include="SymbolTable.cs" />
+    <Compile Include="SymbolTableEntry.cs" />
+    <Compile Include="SynthesizerType.cs" />
+    <Compile Include="TempoVector.cs" />
+    <Compile Include="TempoVectorSearchContext.cs" />
+    <Compile Include="TextStream.cs" />
+    <Compile Include="Timesig.cs" />
+    <Compile Include="TimesigVector.cs" />
+    <Compile Include="TransCodeUtil.cs" />
+    <Compile Include="UstEnvelope.cs" />
+    <Compile Include="UstEvent.cs" />
+    <Compile Include="UstEventProperty.cs" />
+    <Compile Include="UstFile.cs" />
+    <Compile Include="UstFileWriteOptions.cs" />
+    <Compile Include="UstPortamento.cs" />
+    <Compile Include="UstPortamentoPoint.cs" />
+    <Compile Include="UstPortamentoType.cs" />
+    <Compile Include="UstTrack.cs" />
+    <Compile Include="UstVibrato.cs" />
+    <Compile Include="VibratoBPList.cs" />
+    <Compile Include="VibratoBPPair.cs" />
+    <Compile Include="ExpressionConfigSys.cs" />
+    <Compile Include="VibratoHandle.cs" />
+    <Compile Include="VocaloSysUtil.cs" />
+    <Compile Include="VsqBPPair.cs" />
+    <Compile Include="VsqBPPairSearchContext.cs" />
+    <Compile Include="VsqCommon.cs" />
+    <Compile Include="VsqEventList.cs" />
+    <Compile Include="VsqHandle.cs" />
+    <Compile Include="VsqHandleType.cs" />
+    <Compile Include="VsqID.cs" />
+    <Compile Include="VsqIDType.cs" />
+    <Compile Include="VsqMaster.cs" />
+    <Compile Include="VsqMetaText.cs" />
+    <Compile Include="VsqMixer.cs" />
+    <Compile Include="VsqMixerEntry.cs" />
+    <Compile Include="VsqNrpn.cs" />
+    <Compile Include="NrpnData.cs" />
+    <Compile Include="VsqCommandType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TempoTableEntry.cs" />
+    <Compile Include="TimeSigTableEntry.cs" />
+    <Compile Include="VsqBarLineType.cs" />
+    <Compile Include="VsqBPList.cs" />
+    <Compile Include="VsqCommand.cs" />
+    <Compile Include="VsqEvent.cs" />
+    <Compile Include="VsqFile.cs" />
+    <Compile Include="VsqNote.cs" />
+    <Compile Include="VsqPhoneticSymbol.cs" />
+    <Compile Include="VsqTrack.cs" />
+    <Compile Include="VsqVoiceLanguage.cs" />
+    <Compile Include="WrappedStreamWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cadencii.core\cadencii.core.csproj">
+      <Project>{C8AAE632-9C6C-4372-8175-811528A66742}</Project>
+      <Name>cadencii.core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,639 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>cadencii.media</name>
+    </assembly>
+    <members>
+        <member name="F:cadencii.media.WaveReader.m_header_offset">
+            <summary>
+             ファイル先頭から，dataチャンクまでのオフセット
+            </summary>
+        </member>
+        <member name="M:cadencii.media.WavePlay.wave_callback(System.IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            コールバック関数
+        </member>
+        <member name="M:cadencii.media.WavePlay.#ctor(System.Int32,System.Int32)">
+            初期化関数
+        </member>
+        <member name="M:cadencii.media.WavePlay.append(System.Single**,System.UInt32,System.Double,System.Double)">
+            波形データをバッファに追加する。バッファが再生中などの理由で即座に書き込めない場合、バッファが書き込み可能となるまで待機させられる
+        </member>
+        <member name="M:cadencii.media.WavePlay.abort">
+            再生中断を要求する
+        </member>
+        <member name="M:cadencii.media.WavePlay.get_play_time">
+            現在の再生位置を取得する。再生中でない場合負の値となる。
+        </member>
+        <member name="M:cadencii.media.WavePlay.reset">
+            リセットする。abort関数でも呼び出される。
+        </member>
+        <member name="M:cadencii.media.WavePlay.on_your_mark(System.String[],System.Int64)">
+            再生のための準備を行う。この関数を呼び出した後は、バッファが再生開始されるまでget_play_timeの戻り値は0となる（負値にならない）。
+            戻り値は、filesに指定されたファイルの内、最も再生時間の長いwaveファイルの、合計サンプル数
+        </member>
+        <member name="M:cadencii.media.WavePlay.set_first_buffer_written_callback(cadencii.media.FirstBufferWrittenCallback)">
+            コールバック関数を設定する
+        </member>
+        <member name="M:cadencii.media.WavePlay.is_alive">
+            現在再生中かどうかを取得する
+        </member>
+        <member name="M:cadencii.media.WavePlay.change_block_size(System.Int32)">
+            ブロックサイズを変更します
+        </member>
+        <member name="F:cadencii.media.WaveWriter.m_pos_data_chunk">
+            <summary>
+            dataチャンクの開始位置。第1番目のデータが、このアドレスに書き込まれることになる。
+            </summary>
+        </member>
+        <member name="M:cadencii.media.WaveWriter.replace(System.Int64,System.Int32,System.Double[],System.Double[])">
+            <summary>
+            第posサンプルからlengthサンプル分、指定した波形データで置き換えます
+            </summary>
+            <param name="pos"></param>
+            <param name="length"></param>
+            <param name="L"></param>
+            <param name="R"></param>
+        </member>
+        <member name="M:cadencii.media.WaveWriter.writeHeader">
+            <summary>
+            Writes header of WAVE file
+            </summary>
+        </member>
+        <member name="T:cadencii.media.WaveRateConverter">
+            <summary>
+            サンプリングレートを変換しながらWaveファイルを読み込むくためのクラス。
+            接頭辞a: 単位が変換前のサンプル数になっている変数
+            接頭辞b: 単位が変換後のサンプル数になっている変数
+            接頭辞sec: 単位が秒になっている変数
+            </summary>
+        </member>
+        <member name="F:cadencii.media.WaveRateConverter.reader">
+            <summary>
+            Waveデータの読み込み元
+            </summary>
+        </member>
+        <member name="F:cadencii.media.WaveRateConverter.aRate">
+            <summary>
+            変換後のサンプリングレート
+            </summary>
+        </member>
+        <member name="F:cadencii.media.WaveRateConverter.bUnit">
+            <summary>
+            変換するデータ点ユニットのサイズ
+            bUnit個のデータをaUnit個に変更する
+            </summary>
+        </member>
+        <member name="F:cadencii.media.WaveRateConverter.aUnit">
+            <summary>
+            変換ユニットの，変換後のサイズ
+            bUnit個のデータをaUnit個に変更する
+            </summary>
+        </member>
+        <member name="F:cadencii.media.WaveRateConverter.bRate">
+            <summary>
+            読み込み元のサンプルレート
+            </summary>
+        </member>
+        <member name="F:cadencii.media.WaveRateConverter.aTotalSamples">
+            <summary>
+            変換後のサンプル数
+            </summary>
+        </member>
+        <member name="F:cadencii.media.WaveRateConverter.bufLeft">
+            <summary>
+            左チャンネル用バッファ
+            </summary>
+        </member>
+        <member name="F:cadencii.media.WaveRateConverter.bufRight">
+            <summary>
+            右チャンネル用バッファ
+            </summary>
+        </member>
+        <member name="F:cadencii.media.WaveRateConverter.bBuflen">
+            <summary>
+            バッファの長さ
+            </summary>
+        </member>
+        <member name="M:cadencii.media.Util.aviWriteStreamHeader(cadencii.media.AVIStreamHeader,cadencii.media.MainAVIHeader,System.IO.BinaryWriter)">
+            <summary>
+            ファイルにAVIStreamHeader構造体の値を書き込みます
+            </summary>
+        </member>
+        <member name="M:cadencii.media.Util.aviWriteMainHeader(cadencii.media.MainAVIHeader,System.IO.BinaryWriter)">
+            <summary>
+            ファイルにMainAviHeader構造体の値を書き込みます
+            </summary>
+        </member>
+        <member name="M:cadencii.media.Util.WriteBYTE(System.Byte,System.IO.BinaryWriter)">
+            <summary>
+            BYTE値を1byte分ファイルに書き込みます．
+            </summary>
+            <param name="number"></param>
+            <param name="fp"></param>
+        </member>
+        <member name="M:cadencii.media.Util.WriteWORD(System.UInt16,System.IO.BinaryWriter)">
+            <summary>
+            integer(2)のDWORD値を2byte分ファイルに書き込みます．
+            </summary>
+            <param name="number"></param>
+            <param name="fp"></param>
+        </member>
+        <member name="M:cadencii.media.Util.WriteDWORD(System.UInt32,System.IO.BinaryWriter)">
+            <summary>
+            integer(4)のDWORD値を4byte分ファイルに書き込みます
+            </summary>
+            <param name="number"></param>
+            <param name="fp"></param>
+        </member>
+        <member name="M:cadencii.media.Util.WriteQWORD(System.UInt64,System.IO.BinaryWriter)">
+            <summary>
+            integer(8)のQWORD値を8byte分ファイルに書き込みます
+            </summary>
+            <param name="number"></param>
+            <param name="fp"></param>
+        </member>
+        <member name="F:cadencii.media.AviWriterVcm.m_this_movi_size">
+            <summary>
+            現在記入中のmoviチャンクのサイズ
+            </summary>
+        </member>
+        <member name="M:cadencii.media.AviWriterVcm.Open(System.String,System.UInt32,System.UInt32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.IntPtr)">
+            <summary>
+            指定したAVI_CONTAINER構造体にAVIファイルの情報を格納すると共に，
+            ファイルにヘッダー情報を書き込みます．
+            </summary>
+            <param name="file">書き込み対象のファイル</param>
+            <param name="scale"></param>
+            <param name="rate"></param>
+            <param name="compressed"></param>
+        </member>
+        <member name="M:cadencii.media.AviWriterVcm.UpdateIndex">
+            <summary>
+            全てのインデックスを更新し、ファイルが（動画ファイルとして）使用できる状態にします
+            この関数を読んだあとでも，さらにaviAddFrame関数を使うことでフレームを追加することが出来ます．
+            </summary>
+        </member>
+        <member name="M:cadencii.media.AviWriterVcm.Close">
+            <summary>
+            aviファイルを閉じます
+            </summary>
+        </member>
+        <member name="M:cadencii.media.AviWriterVcm.UpdateIndexOfIndex">
+            <summary>
+            最初の[AVI :AVI[LIST:hdrl[LIST:strl]]]に書き込まれているsuper indexチャンク[indx]を更新します
+            </summary>
+        </member>
+        <member name="M:cadencii.media.AviWriterVcm.AddFrame(System.Drawing.Bitmap)">
+            <summary>
+            aviファイルにフレームを1つ追加します．
+            </summary>
+            <param name="bmp"></param>
+        </member>
+        <member name="P:cadencii.media.AviWriterVcm.VfwBugCompatible">
+            <summary>
+            Video For Windows APIとバグコンパチブルな動作をするかどうかを表す値を取得または設定します
+            </summary>
+        </member>
+        <member name="M:cadencii.media.RawAvi2Writer.Open(System.String,System.UInt32,System.UInt32,System.Int32,System.Int32,System.IntPtr)">
+            <summary>
+            指定したAVI_CONTAINER構造体にAVIファイルの情報を格納すると共に，
+            ファイルにヘッダー情報を書き込みます．
+            </summary>
+            <param name="file">書き込み対象のファイル</param>
+            <param name="frameRate">AVIファイルのフレームレート</param>
+        </member>
+        <member name="M:cadencii.media.RawAvi2Writer.UpdateIndex">
+            <summary>
+            全てのインデックスを更新し、ファイルが（動画ファイルとして）使用できる状態にします
+            この関数を読んだあとでも，さらにaviAddFrame関数を使うことでフレームを追加することが出来ます．
+            </summary>
+        </member>
+        <member name="M:cadencii.media.RawAvi2Writer.Close">
+            <summary>
+            aviファイルを閉じます
+            </summary>
+        </member>
+        <member name="M:cadencii.media.RawAvi2Writer.UpdateIndexOfIndex">
+            <summary>
+            最初の[AVI :AVI[LIST:hdrl[LIST:strl]]]に書き込まれているsuper indexチャンク[indx]を更新します
+            </summary>
+        </member>
+        <member name="M:cadencii.media.RawAvi2Writer.AddFrame(System.Drawing.Bitmap)">
+            <summary>
+            aviファイルにフレームを1つ追加します．
+            </summary>
+            <param name="bmp"></param>
+        </member>
+        <member name="M:cadencii.media.PlaySound.prepare(System.Int32)">
+            <summary>
+            デバイスを初期化する
+            </summary>
+            <param name="sample_rate"></param>
+        </member>
+        <member name="M:cadencii.media.PlaySound.exit">
+            <summary>
+            再生をとめる。
+            </summary>
+        </member>
+        <member name="T:cadencii.media.impl.PlaySound">
+            <summary>
+            waveOutをC#から直接呼ぶことで実装したPlaySound。
+            org.kbinani.media.PlaySoundと互換性があるが、たぶんクラッシュしたと思うので使っちゃだめ。
+            </summary>
+        </member>
+        <member name="M:cadencii.media.impl.PlaySound.SoundCallback(System.IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
+            <summary>
+            コールバック関数。バッファの再生終了を検出するために使用。
+            </summary>
+            <param name="hwo"></param>
+            <param name="uMsg"></param>
+            <param name="dwInstance"></param>
+            <param name="dwParam1"></param>
+            <param name="dwParam2"></param>
+        </member>
+        <member name="M:cadencii.media.impl.PlaySound.SoundPrepare(System.Int32)">
+            <summary>
+            デバイスを初期化する
+            </summary>
+            <param name="sample_rate"></param>
+        </member>
+        <member name="M:cadencii.media.impl.PlaySound.SoundExit">
+            <summary>
+            再生をとめる。
+            </summary>
+        </member>
+        <member name="T:cadencii.media.FormantoDetectionArguments">
+            <summary>
+            Parameters of first formanto detection algorithm
+            </summary>
+        </member>
+        <member name="P:cadencii.media.FormantoDetectionArguments.PeakDetectionThreshold">
+            <summary>
+            ピークを検出する閾値。フーリエ変換後の周波数の強度分布関数の値がこの値よりも大きい箇所で
+            密度関数の導関数の符号が正から負へ変わる位置をピークとみなす。周波数密度関数は、最大値で
+            規格化したのを使う。従って、0～1の値を指定する。
+            </summary>
+        </member>
+        <member name="P:cadencii.media.FormantoDetectionArguments.MovingAverageWidth">
+            <summary>
+            フーリエ変換した生の周波数の強度分布を平滑化する幅を2で割った値。Hzで指定。
+            </summary>
+        </member>
+        <member name="M:cadencii.media.Wave.GetF0(System.UInt32,System.Double[],cadencii.media.FormantoDetectionArguments)">
+            <summary>
+            第timeサンプルにおけるフォルマントを取得する
+            </summary>
+            <param name="time"></param>
+            <param name="window_function"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.media.Wave.GetFormanto(System.UInt32,System.Double[])">
+            <summary>
+            第timeサンプルにおけるフォルマントを取得する
+            </summary>
+            <param name="time"></param>
+            <param name="window_function"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.media.Wave.GetVolume(System.Int32,System.Int32,cadencii.math.WindowFunctionType)">
+            <summary>
+            指定したサンプル位置における音量を計算します
+            </summary>
+            <param name="start_sample"></param>
+            <param name="window_size"></param>
+            <param name="window_function_type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.media.Wave.GetVolume(System.Int32,cadencii.math.WindowFunctionType)">
+            <summary>
+            音量の時間変化を取得します
+            </summary>
+            <param name="window_size">窓の幅（サンプル数）</param>
+            <param name="window_function_type">使用する窓関数</param>
+            <param name="resulution">解像度（サンプル数）</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.media.Wave.getNormalizedWave(System.Int32,System.Int64)">
+            <summary>
+            -1から1までに規格化された波形を取得します
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.media.Wave.convertTo8Bit">
+            <summary>
+            サンプルあたりのビット数を8に変更する
+            </summary>
+        </member>
+        <member name="M:cadencii.media.Wave.write(System.String)">
+            <summary>
+            ファイルに保存
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:cadencii.media.Wave.monoralize">
+            <summary>
+            ステレオをモノラル化
+            </summary>
+        </member>
+        <member name="M:cadencii.media.Wave.trimSilence">
+            <summary>
+            前後の無音部分を削除します
+            </summary>
+        </member>
+        <member name="T:cadencii.media.MediaPlayer">
+            <summary>
+            Sound player using mciSendSring command operation
+            </summary>
+        </member>
+        <member name="F:cadencii.media.MediaPlayer.m_load_failed">
+            <summary>
+            the number of Load failure
+            </summary>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.SetSpeed(System.Single)">
+            <summary>
+            Sets the speed
+            </summary>
+            <param name="speed">the value of speed to set</param>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.SetVolume(System.Int32)">
+            <summary>
+            Sets the volume (0 &gt;= volume &gt;= 1000)
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.GetVolume">
+            <summary>
+            Gets the volume (0 &lt;= volume &lt;= 1000)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.mciSendString(System.String,System.Text.StringBuilder,System.Int32,System.Int32)">
+            <summary>
+            external declaration of mciSendString
+            </summary>
+            <param name="s1">Command String</param>
+            <param name="s2">Return String</param>
+            <param name="i1">Return String Size</param>
+            <param name="i2">Callback Hwnd</param>
+            <returns>true when successed, false if not</returns>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.w_mciSendString(System.String,System.String@)">
+            <summary>
+            mciSendString wrapper with exception handling
+            </summary>
+            <param name="command">command sending to MCI</param>
+            <param name="result">returned string of mciSendString</param>
+            <returns>command successedd or not</returns>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.UnLoad">
+            <summary>
+            Closes sound file temporary
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.ReLoad">
+            <summary>
+            Opens sound file which was closed with "UnLoad" method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.Load(System.String)">
+            <summary>
+            Opens sound file
+            </summary>
+            <param name="filename">Path of sound file to open</param>
+            <returns>successed opening the file or not</returns>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.PlayFrom(System.Double)">
+            <summary>
+            Plays sound from specified second
+            </summary>
+            <param name="time">Sound position start to play</param>
+            <returns>true if play command successed</returns>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.Close">
+            <summary>
+            Closes sound file
+            </summary>
+            <returns>true if successed closing sound file</returns>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.Play">
+            <summary>
+            Plays sound from time 0 second
+            </summary>
+            <returns>true if successed to play</returns>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.Seek(System.Double)">
+            <summary>
+            Seeks to specified position
+            </summary>
+            <param name="pos_second">position to seek in second</param>
+            <returns>true if successed to seek</returns>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.Pause">
+            <summary>
+            Pauses sound
+            </summary>
+            <returns>true if successed to pause</returns>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.GetPosition">
+            <summary>
+            Gets the current playing position in millisecond
+            </summary>
+            <returns>playing position in millisecond</returns>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.GetLength">
+            <summary>
+            Gets the sound length in millisecond
+            </summary>
+            <returns>Sound length in millisecond</returns>
+        </member>
+        <member name="M:cadencii.media.MediaPlayer.Stop">
+            <summary>
+            Stops sound
+            </summary>
+            <returns>true if successed to stop</returns>
+        </member>
+        <member name="P:cadencii.media.MediaPlayer.Speed">
+            <summary>
+            Gets or Sets the speed
+            </summary>
+        </member>
+        <member name="P:cadencii.media.MediaPlayer.Volume">
+            <summary>
+            Gets or Sets the volume (0 &gt;= volume &gt;= 1000)
+            </summary>
+        </member>
+        <member name="P:cadencii.media.MediaPlayer.IsMuted">
+            <summary>
+            Gets or Sets whether sound is muted or not
+            </summary>
+        </member>
+        <member name="P:cadencii.media.MediaPlayer.SoundLocation">
+            <summary>
+            Gets the pass of the sound file
+            </summary>
+        </member>
+        <member name="T:cadencii.media.WaveRateConvertAdapter">
+            <summary>
+            接頭辞b: 単位が変換前のサンプル数になっている変数
+            接頭辞a: 単位が変換後のサンプル数になっている変数
+            </summary>
+        </member>
+        <member name="M:cadencii.media.WaveRateConvertAdapter.#ctor(cadencii.media.IWaveReceiver,System.Int32)">
+            <summary>
+            コンストラクタ．変換後のサンプリング周波数は，receiverのgetSampleRate()で自動的に取得される
+            </summary>
+            <param name="receiver">変換した波形を送る相手先</param>
+            <param name="sample_rate">変換前のサンプリング周波数</param>
+        </member>
+        <member name="T:cadencii.media.AviReader">
+            <summary>
+            Extract bitmaps from AVI files
+            </summary>
+        </member>
+        <member name="M:cadencii.media.AviReader.Open(System.String)">
+            <summary>
+            Opens an AVI file and creates a GetFrame object
+            </summary>
+            <param name="fileName">Name of the AVI file</param>
+        </member>
+        <member name="M:cadencii.media.AviReader.Close">
+            <summary>Closes all streams, files and libraries</summary>
+        </member>
+        <member name="M:cadencii.media.AviReader.ExportBitmap(System.Int32,System.String)">
+            <summary>Exports a frame into a bitmap file</summary>
+            <param name="position">Position of the frame</param>
+            <param name="dstFileName">Name ofthe file to store the bitmap</param>
+        </member>
+        <member name="M:cadencii.media.AviWriterVfw.RequireAudioCompressOption">
+            <summary>
+            オーディオ圧縮の設定ダイアログを表示し、オーディオ圧縮の設定を取得します
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:cadencii.media.RateConvertContext">
+            <summary>
+            サンプリング周波数を変換するコア機能を提供
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.bufferRight">
+            <summary>
+            変換結果を格納するバッファ(右チャンネル)
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.bufferLeft">
+            <summary>
+            変換結果を格納するバッファ(左チャンネル)
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.length">
+            <summary>
+            変換結果を格納したバッファの長さ
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.bCount">
+            <summary>
+            受け取ったデータの個数
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.aCount">
+            <summary>
+            receiverに送ったデータの個数
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.bRate">
+            <summary>
+            変換前のサンプリングレート
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.aRate">
+            <summary>
+            変換後のサンプリングレート
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.invBRate">
+            <summary>
+            bRateの逆数
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.invARate">
+            <summary>
+            aRateの逆数
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.bBufBase">
+            <summary>
+            bBufLeft[0]は，変換元データの先頭からbBufBase番目のデータであることを表す
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.mStatus">
+            <summary>
+            変換コンテキストの現在の状態
+            </summary>
+        </member>
+        <member name="M:cadencii.media.RateConvertContext.#ctor(System.Int32,System.Int32)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="sample_rate_from"></param>
+            <param name="sample_rate_to"></param>
+        </member>
+        <member name="M:cadencii.media.RateConvertContext.Finalize">
+            <summary>
+            デストラクタ
+            </summary>
+        </member>
+        <member name="M:cadencii.media.RateConvertContext.dispose">
+            <summary>
+            デストラクタ，のようなもの
+            </summary>
+        </member>
+        <member name="M:cadencii.media.RateConvertContext.estimateResultSamples(cadencii.media.RateConvertContext,System.Int32)">
+            <summary>
+            次にlengthサンプル分のデータを処理した時，結果として得られる変換データのサンプル数を計算します
+            </summary>
+            <param name="context"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.media.RateConvertContext.convert(cadencii.media.RateConvertContext,System.Double[],System.Double[],System.Int32)">
+            <summary>
+            変換を実行する．変換結果は，context.aBufSendLeft, aBufSendRightに格納される．
+            変換後のデータの長さはaBufSendLengthに格納される．
+            戻り値がfalseの場合，もう一度convertを呼ぶ必要はない．
+            戻り値がtrueの場合，変換後のデータがaBufSendLeftなどに入りきらない場合なので，続けてもう一度convertを呼ばなくてはならない．
+            </summary>
+            <param name="context"></param>
+            <param name="left"></param>
+            <param name="right"></param>
+            <param name="length"></param>
+        </member>
+        <member name="T:cadencii.media.RateConvertContext.Status">
+            <summary>
+            コンテキストの状態を表す列挙子
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.Status.NORMAL">
+            <summary>
+            初回のconvert呼び出し
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.Status.CONTINUE">
+            <summary>
+            convertの戻り値がtrueだった場合の，2回目以降の呼び出し
+            </summary>
+        </member>
+        <member name="F:cadencii.media.RateConvertContext.Status.COMPLETE">
+            <summary>
+            次のwave波形を送ってきてもOK
+            </summary>
+        </member>
+        <member name="T:cadencii.media.TestRateConvertContext">
+            <summary>
+            RateConvertContextをテストするクラス
+            </summary>
+        </member>
+    </members>
+</doc>
