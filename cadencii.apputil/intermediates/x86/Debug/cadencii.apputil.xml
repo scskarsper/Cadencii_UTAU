@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>cadencii.apputil</name>
+    </assembly>
+    <members>
+        <member name="M:cadencii.apputil.BSplitContainer.Dispose(System.Boolean)">
+            <summary> 
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:cadencii.apputil.BSplitContainer.InitializeComponent">
+            <summary> 
+            デザイナ サポートに必要なメソッドです。このメソッドの内容を 
+            コード エディタで変更しないでください。
+            </summary>
+        </member>
+        <member name="M:cadencii.apputil.BSplitContainer.setEnabled(System.Boolean)">
+            <summary>
+            コントロールがユーザーとの対話に応答できるかどうかを示す値を設定します。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:cadencii.apputil.BSplitContainer.isEnabled">
+            <summary>
+            コントロールがユーザーとの対話に応答できるかどうかを示す値を取得します。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:cadencii.apputil.OBSOLUTE_BHScrollBar">
+            <summary>
+            Valueの値が正しくMinimumからMaximumの間を動くスクロールバー
+            </summary>
+        </member>
+        <member name="F:cadencii.apputil.OBSOLUTE_BHScrollBar.components">
+            <summary> 
+            必要なデザイナ変数です。
+            </summary>
+        </member>
+        <member name="M:cadencii.apputil.OBSOLUTE_BHScrollBar.Dispose(System.Boolean)">
+            <summary> 
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:cadencii.apputil.OBSOLUTE_BHScrollBar.InitializeComponent">
+            <summary> 
+            デザイナ サポートに必要なメソッドです。このメソッドの内容を 
+            コード エディタで変更しないでください。
+            </summary>
+        </member>
+        <member name="M:cadencii.apputil.Messaging.loadMessages">
+            <summary>
+            現在の実行ディレクトリにある言語設定ファイルを全て読込み、メッセージリストに追加します
+            </summary>
+        </member>
+        <member name="M:cadencii.apputil.Messaging.loadMessages(System.String)">
+            <summary>
+            指定されたディレクトリにある言語設定ファイルを全て読込み、メッセージリストに追加します
+            </summary>
+            <param name="directory"></param>
+        </member>
+        <member name="T:cadencii.apputil.OBSOLUTE_BVScrollBar">
+            <summary>
+            Valueの値が正しくMinimumからMaximumの間を動くスクロールバー
+            </summary>
+        </member>
+        <member name="F:cadencii.apputil.OBSOLUTE_BVScrollBar.components">
+            <summary> 
+            必要なデザイナ変数です。
+            </summary>
+        </member>
+        <member name="M:cadencii.apputil.OBSOLUTE_BVScrollBar.Dispose(System.Boolean)">
+            <summary> 
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:cadencii.apputil.OBSOLUTE_BVScrollBar.InitializeComponent">
+            <summary> 
+            デザイナ サポートに必要なメソッドです。このメソッドの内容を 
+            コード エディタで変更しないでください。
+            </summary>
+        </member>
+        <member name="T:cadencii.apputil.BTrackBar`1">
+            <summary>
+            Valueの型を変えられるTrackBar
+            </summary>
+        </member>
+        <member name="M:cadencii.apputil.CubicSpline.#ctor(System.Double[],System.Double[])">
+            <summary>配列の形で与えられるデータ点から，3次のスプライン補間で用いる各区域のxの多項式の係数を計算します</summary>
+            <param name="x">データ点のx座標を格納した配列</param>
+            <param name="y">データ点のy座標を格納した配列</param>
+        </member>
+        <member name="M:cadencii.apputil.CubicSpline.LUDecTDM(System.Int32,System.Double[],System.Double[],System.Double[],System.Double[],System.Double[]@)">
+            <summary>
+            This subroutine solves system of linear equation(only for
+            tridiagonal matrix system) by LU decompression method.
+            Meanings of variables are defined below. 
+                      ( a1  c1                       0     ) ( x1 )   ( y1 )
+                      ( b2  a2  c2                         ) ( x2 )   ( y2 )
+                      (     b3  a3  c3                     ) ( x3 )   ( y3 )
+                      (                 ...                ) ( ...) = ( ...)
+                      (                     bN-1 aN-1 cN-1 ) (xN-1)   (yN-1)
+                      (        0                  bN   aN  ) ( xN )   ( yN )
+            </summary>
+            <param name="N"></param>
+            <param name="a"></param>
+            <param name="b"></param>
+            <param name="c"></param>
+            <param name="y"></param>
+            <param name="x"></param>
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_apricot_blue(System.Double)">
+            APRICOT [No.1];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_carnation_blue(System.Double)">
+            CARNATION [No.2];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_ether_blue(System.Double)">
+            ETHER [No.3];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_grayscale_banded_rgb(System.Double)">
+            GRAYSCALE_BANDED [No.4];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_hotmetal_blue(System.Double)">
+            HOT_METAL [No.5];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_lava_waves_red(System.Double)">
+            LAVA_WAVES [No.6];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_malachite_blue(System.Double)">
+            MALACHITE [No.7];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_morning_glory_red(System.Double)">
+            MORNING_GLORY [No.8];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_peanut_butter_and_jerry_red(System.Double)">
+            PEANUT_BUTTER_AND_JERRY [No.9];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_purple_haze_red(System.Double)">
+            PURPLE_HAZE [No.10];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_rainbow_red(System.Double)">
+            RAINBOW [No.11];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_rainbow_banded_h(System.Double)">
+            RAINBOW_BANDED [No.12];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_rainbow_striped_h(System.Double)">
+            RAINBOW_STRIPED [No.13];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_rose_red(System.Double)">
+            ROSE [No.14];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_saturn_red(System.Double)">
+            SATURN [No.15];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_seismic_red(System.Double)">
+            SEISMIC [No.16];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_space_red(System.Double)">
+            SPACE [No.17];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_supernova_red(System.Double)">
+            SUPERNOVA [No.18];
+        </member>
+        <member name="M:cadencii.apputil.Util.oport_colorbar_rflow_rainbow_red(System.Double)">
+            rflow%rainbow [No.20];
+        </member>
+        <member name="F:cadencii.apputil.Util.isApplyFontRecurseEnabled">
+            <summary>
+            このクラスのメソッド'applyFontRecurse', 'applyToolStripFontRecurse', 'applyContextMenuFontRecurse'の呼び出しを有効とするかどうか。
+            デフォルトではtrue
+            </summary>
+        </member>
+        <member name="M:cadencii.apputil.Util.getStringDrawOffset(cadencii.java.awt.Font)">
+            <summary>
+            指定したフォントを描画するとき、描画指定したy座標と、描かれる文字の中心線のズレを調べます
+            </summary>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.apputil.Util.isRightToLeftLanguage(System.String)">
+            <summary>
+            指定した言語コードの表す言語が、右から左へ記述する言語かどうかを調べます
+            </summary>
+            <param name="language_code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.apputil.Util.GetTempFileNameIn(System.String)">
+            <summary>
+            指定したディレクトリに作成可能な、一時ファイル名を取得します
+            </summary>
+            <param name="directory">ディレクトリ</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.apputil.Util.GetTempFileNameIn(System.String,System.String)">
+            <summary>
+            指定したディレクトリに作成可能な、一時ファイル名を取得します
+            </summary>
+            <param name="directory">ディレクトリ</param>
+            <param name="extention">拡張子（ex. ".txt"）</param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.apputil.Util.BitmapFromStream(System.String)">
+            <summary>
+            指定した画像ファイルから新しいBitmapオブジェクトを作成します
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.apputil.Util.ImageFromStream(System.String)">
+            <summary>
+            指定した画像ファイルから新しいImageオブジェクトを作成します
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.apputil.Util.GetExtensionFromImageFormat(System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            ImageFormatから，デフォルトの拡張子を取得します
+            </summary>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.apputil.Util.GetImageFormats">
+            <summary>
+            System.Drawimg.Imaging.ImageFormatで使用可能なフォーマットの一覧を取得します
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.apputil.Util.measureString(System.String,cadencii.java.awt.Font)">
+            <summary>
+            指定された文字列を指定されたフォントで描画したときのサイズを計測します。
+            </summary>
+            <param name="text"></param>
+            <param name="font"></param>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.apputil.Util.applyFontRecurse(System.Windows.Forms.Control,System.Drawing.Font)">
+            <summary>
+            指定したコントロールと、その子コントロールのフォントを再帰的に変更します
+            </summary>
+            <param name="c"></param>
+            <param name="font"></param>
+        </member>
+        <member name="M:cadencii.apputil.Util.IsOverwrapped(System.Double,System.Double,System.Double,System.Double)">
+             <summary>
+            
+             </summary>
+             <param name="start1"></param>
+             <param name="end1"></param>
+             <param name="start2"></param>
+             <param name="end2"></param>
+             <returns></returns>
+        </member>
+        <member name="F:cadencii.apputil.VersionInfo.components">
+            <summary>
+            必要なデザイナ変数です。
+            </summary>
+        </member>
+        <member name="M:cadencii.apputil.VersionInfo.Dispose(System.Boolean)">
+            <summary>
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        </member>
+        <member name="M:cadencii.apputil.VersionInfo.InitializeComponent">
+            <summary>
+            デザイナ サポートに必要なメソッドです。このメソッドの内容を
+            コード エディタで変更しないでください。
+            </summary>
+        </member>
+        <member name="P:cadencii.apputil.VersionInfo.VersionColor">
+            <summary>
+            バージョン番号表示の文字色を取得または設定します
+            </summary>
+        </member>
+        <member name="P:cadencii.apputil.VersionInfo.AppNameColor">
+            <summary>
+            アプリケーション名表示の文字色を取得または設定します
+            </summary>
+        </member>
+        <member name="T:cadencii.apputil.PolylineDrawer">
+            <summary>
+            折れ線を効率よく描画するための描画プラクシーです。
+            あらかじめ指定された個数の座標データを保持しておき、必要になったらdrawPolyline[java], DrawLines[C#]でまとめて描画する仕組みになっています。
+            </summary>
+        </member>
+        <member name="F:cadencii.apputil.PolylineDrawer.length">
+            <summary>
+            保持する座標データの長さ
+            </summary>
+        </member>
+        <member name="F:cadencii.apputil.PolylineDrawer.points">
+            <summary>
+            座標データ
+            </summary>
+        </member>
+        <member name="F:cadencii.apputil.PolylineDrawer.pos">
+            <summary>
+            次に書き込むべき、座標データ配列のインデックス
+            </summary>
+        </member>
+        <member name="F:cadencii.apputil.PolylineDrawer.g">
+            <summary>
+            描画に使用するグラフィクスオブジェクト
+            </summary>
+        </member>
+        <member name="M:cadencii.apputil.PolylineDrawer.#ctor(cadencii.java.awt.Graphics2D,System.Int32)">
+            <summary>
+            描画に使用するグラフィクスとバッファの長さを指定したコンストラクタ。
+            </summary>
+            <param name="g">描画に使用するグラフィクスオブジェクト。nullでもかまわない</param>
+            <param name="buffer_length">座標バッファの個数(2より小さい値を指定した場合、替わりに「1024」が使用される)</param>
+        </member>
+        <member name="M:cadencii.apputil.PolylineDrawer.clear">
+            <summary>
+            保持している座標データをクリアします。
+            </summary>
+        </member>
+        <member name="M:cadencii.apputil.PolylineDrawer.setGraphics(cadencii.java.awt.Graphics2D)">
+            <summary>
+            描画に使用するグラフィクスオブジェクトを指定します。
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:cadencii.apputil.PolylineDrawer.getGraphics">
+            <summary>
+            描画に使用するグラフィクスオブジェクトを取得します。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:cadencii.apputil.PolylineDrawer.append(System.Int32,System.Int32)">
+            <summary>
+            座標データを追加します。描画が必要になった場合は、描画も行われます。
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:cadencii.apputil.PolylineDrawer.flush">
+            <summary>
+            現在保持している座標データを、強制的に描画します。
+            </summary>
+        </member>
+    </members>
+</doc>
